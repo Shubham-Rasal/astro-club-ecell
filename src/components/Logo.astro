@@ -1,6 +1,12 @@
 ---
+import { Image } from '@astrojs/image/components';
+import logo from '../assets/images/logo_ecell.svg';
 ---
 
-<span class="self-center ml-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  🚀 AstroWind</span
->
+<Image
+  src={logo}
+  alt="E-Cell Logo"
+  width={60}
+  height={60}
+  class="self-center ml-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+/>

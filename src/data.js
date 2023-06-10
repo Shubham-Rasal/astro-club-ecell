@@ -2,82 +2,53 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
+    
     {
-      text: 'Landing',
+      text: 'About',
       links: [
-        {
-          text: 'Sass',
-          href: getPermalink('/landing/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/landing/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/landing/mobile-app'),
-        },
-      ],
-    },
-    {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features',
-          href: '#',
-        },
-        {
-          text: 'Pricing',
-          href: '#',
-        },
+
         {
           text: 'About us',
-          href: '#',
+          href: '/about',
         },
         {
           text: 'Contact',
-          href: '#',
+          href: '/contact',
         },
         {
           text: 'Terms',
           href: getPermalink('/terms'),
         },
         {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
+          text: 'Our Vision',
+          href: getPermalink('/vision'),
         },
       ],
     },
     {
-      text: 'Widgets',
-      href: '#',
+      text: 'Podcast',
+      href: getPermalink('/privacy'),
     },
     {
       text: 'Blog',
       href: getBlogPermalink(),
     },
   ],
-  actions: [
-    { type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }
-  ],
+  actions: [{ type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }],
 };
-  
+
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Explore',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Home', href: '#' },
+        { text: 'About Us', href: '#' },
+        { text: 'Blog', href: '#' },        
       ],
     },
     {
-      title: 'Platform',
+      title: 'Discover',
       links: [
         { text: 'Developer API', href: '#' },
         { text: 'Partners', href: '#' },
@@ -87,7 +58,7 @@ export const footerData = {
       ],
     },
     {
-      title: 'Support',
+      title: 'Initiatives',
       links: [
         { text: 'Docs', href: '#' },
         { text: 'Community Forum', href: '#' },
@@ -97,15 +68,10 @@ export const footerData = {
       ],
     },
     {
-      title: 'Company',
+      title: 'Feedback',
       links: [
         { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'Blog', href: '#' },        
       ],
     },
   ],
@@ -120,8 +86,5 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
-  footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
-  `,
+  
 };

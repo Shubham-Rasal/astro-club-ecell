@@ -1,7 +1,7 @@
 ---
 publishDate: 2023-01-09T00:00:00Z
 title: Useful tools and resources to create a professional website
-excerpt: Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur.
+excerpt: I have compiled a list of useful tools and resources that I have used to create a professional website. I hope you find them useful too.
 image: ~/assets/images/tools.jpg
 tags:
   - front-end
