@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import Sectionhead from '../components/Sectionhead.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <Sectionhead>
+    <Fragment slot="title">The Building Blocks of Business</Fragment>
+    <Fragment slot="desc">E-Cell NITK presents our official podcast - The Building Blocks of Business</Fragment>
+  </Sectionhead>
+
+  <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+     <p class="text-lg text-center leading-relaxed dark:text-gray-400 text-slate-500">
+      Here we bring you the best that business and entrepreneurship has to offer. So what are you waiting for? Grab your
+      earphones to listen to some inspiring journeys and sneak a peek at what lies ahead after graduation!
+    </p>
+  </div>
+  <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+    <div class="episodes">
+      <div class="e1 flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+        <h2 class="font-bold text-3xl dark:text-gray-300 text-gray-800">Episode 1</h2>
+        <p class="text-lg leading-relaxed dark:text-gray-400 text-slate-500">
+          In this episode, we have with us Mr. Anand Daniel, a partner at Accel Partners, a venture capital firm that
+          invests in early-stage startups. He is also an alumnus of NITK, graduating in 2001 with a degree in Computer
+          Science. He has been a part of the startup ecosystem for over 15 years, and has worked with companies like
+          Accel, Intel, and Microsoft. He has also been a part of the founding team of two startups, and has invested in
+          over 50 startups. He is also a board member at NITK’s incubation centre, the Centre for Entrepreneurship
+          Opportunities and Learning (CEOL). In this episode, we talk about his journey from NITK to Accel, his
+          experience as an entrepreneur, and his advice for students who want to get into the startup ecosystem.
+        </p>
+        <iframe
+          src="https://open.spotify.com/embed-podcast/episode/1Z3Z3Z1Z3Z1Z3Z1Z3Z1Z3Z?theme=0"
+          width="100%"
+          height="232"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+</Layout>
