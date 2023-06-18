@@ -27,14 +27,14 @@ export const headerData = {
     },
     {
       text: 'Podcast',
-      href: getPermalink('/privacy'),
+      href: getPermalink('/podcast'),
     },
     {
       text: 'Blog',
       href: getBlogPermalink(),
     },
   ],
-  actions: [{ type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }],
+  actions: [],
 };
 
 export const footerData = {
@@ -44,34 +44,24 @@ export const footerData = {
       links: [
         { text: 'Home', href: '#' },
         { text: 'About Us', href: '#' },
-        { text: 'Blog', href: '#' },        
-      ],
-    },
-    {
-      title: 'Discover',
-      links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: 'Blog', href: '#' },  
+          
       ],
     },
     {
       title: 'Initiatives',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'SIP', href: '#' },
+        { text: 'CAP', href: '#' },
+        { text: 'Podcast', href: '#' },
+        { text: 'Startup Hub', href: '#' },
+        { text: 'E Summit', href: '#' },
       ],
     },
     {
       title: 'Feedback',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },        
+        {text: 'Contact', href: '#'}           
       ],
     },
   ],

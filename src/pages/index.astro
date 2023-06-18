@@ -25,10 +25,10 @@ const meta = {
 
   <Hero
     callToAction2={{ text: 'Our Vision', href: '/vision' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    image={{ src: import('~/assets/images/logo_ecell.svg'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      <div class="p-8">Entrepreneurship Cell</div>
+      <div class="p-2">Entrepreneurship Cell</div>
       <span class="text-accent dark:text-white highlight"> NITK, Surathkal</span>
     </Fragment>
 
@@ -47,14 +47,14 @@ const meta = {
 
   <!-- Features Widget *************** -->
 
-  <Features
-    highlight="Features"
-    title="What you get with AstroWind"
-    subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+  <!-- <Features
+    highlight=""
+    title="Who are we ?"
+    subtitle="The Entrepreneurship Cell of NITK Surathkal aims to create, foster and promote the spirit of entrepreneurship by helping young and talented minds pursue the path of innovation and set up their own entrepreneurial ventures."
     items={[
       [
         {
-          title: 'Astro + Tailwind CSS Integration',
+          title: '
           description:
             'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
           icon: 'tabler:brand-tailwind',
@@ -93,7 +93,7 @@ const meta = {
         },
       ],
     ]}
-  />
+  /> -->
 
   <!-- Content Widget **************** -->
 
@@ -129,67 +129,87 @@ const meta = {
       insight into the crucial role teamwork plays in the success of any business venture.
     </Fragment>
   </Content>
+  <Content   
+    isReversed
+    items={[
+      {
+        title: 'Per ei quaeque sensibus',
+        description:
+          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+      },
+      {
+        title: 'Cu imperdiet posidonium sed',
+        description:
+          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+      },
+      {
+        title: 'Nulla omittam sadipscing mel ne',
+        description:
+          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/caos.jpg'),
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Enterprise</h3>
+      Enterprise is one of our primary events and is designed to provide freshers with first-hand experience in entrepreneurship.
+      The event encompasses everything from building your own B-Plan to generating revenue and gives the participants greater
+      insight into the crucial role teamwork plays in the success of any business venture.
+    </Fragment>
+  </Content>
 
   <!-- Features2 Widget ************** -->
 
   <Features2
     title="Learning Portal"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
+    subtitle="E-Cell NITK believes that constant learning is the key to entrepreneurial success. To help kickstart this process, we present our own specially made course pathways for beginners, that cover a diversified range of subjects. These self-paced pathways are designed to orient students towards entrepreneurship and strengthen their business acumen and decision making while also catering to the interests of all the business enthusiasts out there"
     items={[
       {
-        title: 'Headers',
+        title: 'Entrepreneurship',
         description:
           'In general, Headers contain information that makes it easier for visitors to interact with the website.',
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Heros',
+        title: 'Finance',
         description:
           'If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.',
         icon: 'flat-color-icons:gallery',
       },
       {
-        title: 'Features',
+        title: 'Cryptocurrency',
         description:
           'Display your product in action and how the Features actually create a solution for your target customer.',
         icon: 'flat-color-icons:todo-list',
       },
       {
-        title: 'Content',
+        title: 'Product Management',
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
         icon: 'flat-color-icons:document',
       },
       {
-        title: 'Call-to-Action',
+        title: 'Marketing',
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
         icon: 'flat-color-icons:advertising',
       },
       {
-        title: 'Pricing',
+        title: 'Economics',
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
         icon: 'flat-color-icons:currency-exchange',
       },
       {
-        title: 'Testimonial',
+        title: 'Entrepreneurship 2',
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
         icon: 'flat-color-icons:voice-presentation',
       },
-      {
-        title: 'Contact',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'icon-park:page-template',
-      },
+      
     ]}
   />
 
@@ -261,23 +281,4 @@ const meta = {
       { name: 'Users', value: '48.4K' },
     ]}
   />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
-    }}
-  >
-    <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
 </Layout>

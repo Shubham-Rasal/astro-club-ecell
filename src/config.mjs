@@ -1,15 +1,15 @@
-import defaultImage from './assets/images/default.png';
+import defaultImage from './assets/images/logo_ecell.svg';
 
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'E Cell NITK',
 
   origin: 'https://astrowind.vercel.app',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
+  title: 'E Cell NITK',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+    '🚀 E Cell NITK is a student run body that aims to foster the spirit of entrepreneurship among the students of NITK.',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
