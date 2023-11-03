@@ -9,6 +9,45 @@ const meta = {
   description: SITE.description,
   dontUseTitleTemplate: true,
 };
+
+const episodes = [
+  {
+    title: 'Exploring ISB YLP',
+    description:
+      'Join us for our first episode with Mr. Achuth Arun, NITK Alumnus, as he shares strategies and tips on cracking the ISB Young Leadership Programme while also talking about his own journey and experiences with the YLP.',
+    iframe_spotify_link: 'https://open.spotify.com/embed-podcast/episode/0qN2ngeeiVmq6aytqllFCB',
+  },
+  {
+    title: 'Cracking the MiM Mystery!',
+    description:
+      'Join us for our second episode of the season, where Mr. Pranav Ram, HEC Paris and NITK Alumnus, and Mr. Yashwant Yenduri, ESSEC and NITK Alumnus, talk about their journeys with their respective programs and impart insights associated with the MiM degree!',
+    iframe_spotify_link: 'https://open.spotify.com/embed-podcast/episode/1nRMxLD3MdXisuJDHnah38',
+  },
+  {
+    title: 'The Finance Route',
+    description:
+      'With the market being saturated with conventional business programs, Hema Sai Teja Aravapalli, NITK Alumnus joins us for this episode to talk about his decision to pursue the less taken route and how his love for core Finance landed him a seat at the prestigious Masters in Finance Program in NUS Business School, Singapore.',
+    iframe_spotify_link: 'https://open.spotify.com/embed-podcast/episode/52nEAGjCCcGKslwFkK7gCS',
+  },
+  {
+    title: 'Demistifying MBA Abroad',
+    description:
+      'Join us for our final episode of the first season with Mr. Abhishek Patro, NITK Alumnus, as he talks about his experiences of pursuing a MEM at Duke University, USA followed by his inspirations of securing the prestigious MBA Program from INSEAD, France.',
+    iframe_spotify_link: 'https://open.spotify.com/embed-podcast/episode/5ZAYuvKvhcKY9RdbCqS50D',
+  },
+  {
+    title: 'The Retail Revolution',
+    description:
+      'At his time at Goldman Sachs, Abhinav Pathak and his colleague understood the influence of retail on the Indian Economy. With time, he learnt how to succeed at things that many people fail at - growing a business. Listen to this episode as the recipient of the Forbes 30 under 30 award and Co-founder of Perpule shares his success formula, that has brought him acclaim in the startup ecosystem!',
+    iframe_spotify_link: 'https://open.spotify.com/embed-podcast/episode/6OiFpVezcIKzTXvjcHUCX8',
+  },
+  {
+    title: 'Powering Healthcare through AI',
+    description:
+      'Always interested in building something of his own, Layak Singh founded his first startup cogxio in 2015. A fellow in the Startup leadership program, his latest startup Artivatic.ai recently got recognised by the government of India in the Atmanirbhar AI challenge 2020. Hear about his experience as he describes his struggles of being a founder and investor in the startup world.',
+    iframe_spotify_link: 'https://open.spotify.com/embed-podcast/episode/4uRbRMDGS2u8iifVsV96q6',
+  },
+];
 ---
 
 <Layout {meta}>
@@ -18,31 +57,28 @@ const meta = {
   </Sectionhead>
 
   <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-     <p class="text-lg text-center leading-relaxed dark:text-gray-400 text-slate-500">
+    <p class="text-lg text-center leading-relaxed dark:text-gray-400 text-slate-500">
       Here we bring you the best that business and entrepreneurship has to offer. So what are you waiting for? Grab your
       earphones to listen to some inspiring journeys and sneak a peek at what lies ahead after graduation!
     </p>
   </div>
   <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
     <div class="episodes">
-      <div class="e1 flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-        <h2 class="font-bold text-3xl dark:text-gray-300 text-gray-800">Episode 1</h2>
-        <p class="text-lg leading-relaxed dark:text-gray-400 text-slate-500">
-          In this episode, we have with us Mr. Anand Daniel, a partner at Accel Partners, a venture capital firm that
-          invests in early-stage startups. He is also an alumnus of NITK, graduating in 2001 with a degree in Computer
-          Science. He has been a part of the startup ecosystem for over 15 years, and has worked with companies like
-          Accel, Intel, and Microsoft. He has also been a part of the founding team of two startups, and has invested in
-          over 50 startups. He is also a board member at NITK’s incubation centre, the Centre for Entrepreneurship
-          Opportunities and Learning (CEOL). In this episode, we talk about his journey from NITK to Accel, his
-          experience as an entrepreneur, and his advice for students who want to get into the startup ecosystem.
-        </p>
-        <iframe
-          src="https://open.spotify.com/embed-podcast/episode/1nRMxLD3MdXisuJDHnah38"
-          width="100%"
-          height="232"
-          allowtransparency="true"
-          allow="encrypted-media"></iframe>
-      </div>
+      {
+        episodes.map((episode, index) => (
+          <div class={`e${index + 2} flex flex-col gap-3 mx-auto max-w-4xl mt-16`}>
+            <h2 class="font-bold text-3xl dark:text-gray-300 text-gray-800">{episode.title}</h2>
+            <p class="text-lg leading-relaxed dark:text-gray-400 text-slate-500">{episode.description}</p>
+            <iframe
+              src={episode.iframe_spotify_link}
+              width="100%"
+              height="232"
+              allowtransparency="true"
+              allow="encrypted-media"
+            />
+          </div>
+        ))
+      }
     </div>
   </div>
 </Layout>
