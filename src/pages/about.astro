@@ -4,26 +4,12 @@ import { SITE } from '~/config.mjs';
 import { Picture } from '@astrojs/image/components';
 import Layout from '~/layouts/PageLayout.astro';
 import Sectionhead from '../components/Sectionhead.astro';
-import { findImage } from '~/utils/images';
-
+import LinkedinIcon from '~/components/LinkedinIcon.astro';
+import MailIcon from '~/components/MailIcon.astro';
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection('team', async ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
-
-//go through each item in team and add
-// const image = await findImage(data.src);
-//   console.log(data.src, image);
-
-const team = publishedTeamMembers.map(async ({ data }) => {
-  const image = await findImage(data.src);
-  console.log(data.src, image);
-  return {
-    ...data, image
-  }
-});
-
-console.log(team);
 
 const meta = {
   title: SITE.title,
@@ -53,8 +39,8 @@ const meta = {
             <Picture
               src={teamMemberEntry.data.src}
               alt={teamMemberEntry.data.alt}
-              sizes="(max-width: 800px) 100vw, 400px"
-              widths={[200, 400]}
+              sizes="(max-width: 80px) 10vw, 400px"
+              widths={[100, 400]}
               aspectRatio="1:1"
               background="#ffffff"
               fit="cover"
@@ -63,9 +49,17 @@ const meta = {
             />
           </div>
 
-          <div class="mt-4 text-center">
+          <div class="mt-4 flex flex-col text-center  items-center">
             <h2 class="text-lg dark:text-gray-200 text-gray-800">{teamMemberEntry.data.name}</h2>
             <h3 class="text-sm text-slate-500">{teamMemberEntry.data.title}</h3>
+            <div class="flex">
+              <a href={teamMemberEntry.data.linkedin} target="_blank" rel="noopener noreferrer">
+                <LinkedinIcon />
+              </a>
+              <a href={`mailto:${teamMemberEntry.data.mail}`} target="_blank" rel="noopener noreferrer">
+                <MailIcon />
+              </a>
+            </div>
           </div>
         </div>
       ))
