@@ -42,7 +42,7 @@ export const footerData = {
     {
       title: 'Explore',
       links: [
-        { text: 'Home', href: '#' },
+        { text: 'Home', href: '/' },
         { text: 'About Us', href: '/about' },
         { text: 'Blog', href: '/blog' },
 
@@ -51,14 +51,14 @@ export const footerData = {
     {
       title: 'Initiatives',
       links: [
-        { text: 'Podcast', href: '#' },
-      { text: 'E Summit', href: '#' },
+        { text: 'Podcast', href: '/podcast' },
+      { text: 'E Summit', href: '/summits' },
       ],
     },
     {
       title: 'Feedback',
       links: [
-        { text: 'Contact', href: '#' }
+        { text: 'Contact', href: '/contact' }
       ],
     },
   ],

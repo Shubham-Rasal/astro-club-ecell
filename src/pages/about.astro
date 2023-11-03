@@ -6,6 +6,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Sectionhead from '../components/Sectionhead.astro';
 import LinkedinIcon from '~/components/LinkedinIcon.astro';
 import MailIcon from '~/components/MailIcon.astro';
+import Icon from 'astro-icon';
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection('team', async ({ data }) => {
   return !data.draft && data.publishDate < new Date();
@@ -31,7 +32,7 @@ const meta = {
       personalities, experiences and skills to the job. This is what makes our team so special.
     </p>
   </div>
-  <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+  <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12 mb-4">
     {
       publishedTeamMembers.map((teamMemberEntry) => (
         <div class="group">
@@ -52,12 +53,12 @@ const meta = {
           <div class="mt-4 flex flex-col text-center  items-center">
             <h2 class="text-lg dark:text-gray-200 text-gray-800">{teamMemberEntry.data.name}</h2>
             <h3 class="text-sm text-slate-500">{teamMemberEntry.data.title}</h3>
-            <div class="flex">
+            <div class="flex gap-2 mt-2 text-slate-500 dark:text-gray-400">
               <a href={teamMemberEntry.data.linkedin} target="_blank" rel="noopener noreferrer">
-                <LinkedinIcon />
+                <Icon name='tabler:brand-linkedin' class="w-8 h-8" /> 
               </a>
               <a href={`mailto:${teamMemberEntry.data.mail}`} target="_blank" rel="noopener noreferrer">
-                <MailIcon />
+                <Icon name='tabler:mail' class="w-8 h-8" />
               </a>
             </div>
           </div>
