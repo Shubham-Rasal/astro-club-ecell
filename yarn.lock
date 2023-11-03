@@ -1419,7 +1419,7 @@ astring@^1.8.0:
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.8.6.tgz#2c9c157cf1739d67561c56ba896e6948f6b93731"
   integrity sha512-ISvCdHdlTDlH5IpxQJIex7BWBywFWgjJSVdwst+/iQCoEYnyOaQ95+X1JGshuBjGp6nxKUy1jMgE3zPqN7fQdg==
 
-astro-compress@^1.1.42:
+astro-compress@2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/astro-compress/-/astro-compress-2.2.2.tgz#fb9182f66875cb18fc14e2343354e03014f731c8"
   integrity sha512-XEGHH6mJZHii0MCcQorCETrdme0tJTv5sU+PiLIUpekjv5GU3STHZ9pk09actvco6nlK9iWONTOuWg3vPmlJ6w==
