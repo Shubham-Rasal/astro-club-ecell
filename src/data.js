@@ -15,10 +15,10 @@ export const headerData = {
           text: 'Contact',
           href: '/contact',
         },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
+        // {
+        //   text: 'Terms',
+        //   href: getPermalink('/terms'),
+        // },
         {
           text: 'Our Vision',
           href: getPermalink('/vision'),

@@ -70,7 +70,7 @@ import { SITE } from '~/config.mjs';
           href = `https://wa.me/?text=${text}%20${url}`;
           break;
         case 'mail':
-          href = `mailto:?subject=%22${text}%22&body=${text}%20${url}`;
+          href = ` ?subject=%22${text}%22&body=${text}%20${url}`;
           break;
 
         default:

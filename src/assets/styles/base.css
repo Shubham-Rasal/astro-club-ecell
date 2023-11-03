@@ -14,9 +14,9 @@
   .bg-light {
     background-color: var(--aw-color-bg-page);
   }
-
+  
   .bg-dark {
-    @apply bg-slate-900;
+    background-color: var(--aw-color-bg-dark);
   }
 
   

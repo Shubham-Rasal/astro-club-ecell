@@ -16,6 +16,7 @@ export interface Props {
 
 const { post } = Astro.props;
 const image = await findImage(post.image);
+console.log(image);
 
 const link = !BLOG?.post?.disabled ? getPermalink(post.permalink, 'post') : '';
 ---
